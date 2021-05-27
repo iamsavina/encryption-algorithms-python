@@ -1,8 +1,11 @@
-import main
 
-def encrypt():
+def encrypt(menu):
     print("Ënter text to encrypt \n")
     print("Running the program")
+    menu()
 
-main.menu()
-# menu()
+def decrypt(menu):
+    print("Decryptiong")
+    print("Running the program")
+
+    menu()
