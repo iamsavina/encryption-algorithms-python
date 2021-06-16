@@ -1,4 +1,4 @@
-import encryptDecrypt
+from encryptDecrypt import *
 
 def menu():
     print("1. Encrypt")
@@ -7,9 +7,11 @@ def menu():
     userInput = int(input("Enter : "))
     if (userInput):
         if (userInput == 1):
-            encryptDecrypt.encrypt(menu)
+            encrypt()
+            menu()
         elif (userInput == 2):
-            encryptDecrypt.decrypt(menu)
+            decrypt()
+            menu()
         elif (userInput == 3):
             exit()
         else:
@@ -17,3 +19,4 @@ def menu():
             menu()
 
 menu()
+
