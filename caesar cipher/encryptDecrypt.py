@@ -29,11 +29,11 @@ def decrypt():
         # Encrypt uppercase characters
         if (char.isupper()):
             # result += chr((ord(char) + key-65) % 26 + 65)
-            result += chr((ord(char) + key+65) % 26 + 65)
+            result += chr((ord(char) - key-65) % 26 + 65)
  
         # Encrypt lowercase characters
         else:
             # result += chr((ord(char) + key - 97) % 26 + 97)
-            result += chr((ord(char) + key + 97) % 26 + 97)
+            result += chr((ord(char) - key - 97) % 26 + 97)
  
-    return print("Your cipher text is : ",result)
+    return print("Your plain text is : ",result)
